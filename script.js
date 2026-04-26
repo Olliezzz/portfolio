@@ -1,18 +1,18 @@
-// Mobile navigation for smaller screens
+// Mobile menu toggle for smaller screens
 const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
+const sideNav = document.querySelector(".side-nav");
 
-if (navToggle && siteNav) {
+if (navToggle && sideNav) {
   navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
+    const isOpen = sideNav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.textContent = isOpen ? "Close" : "Menu";
     document.body.classList.toggle("menu-open", isOpen);
   });
 
-  siteNav.querySelectorAll("a").forEach((link) => {
+  sideNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
+      sideNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
       navToggle.textContent = "Menu";
       document.body.classList.remove("menu-open");
@@ -20,7 +20,7 @@ if (navToggle && siteNav) {
   });
 }
 
-// Subtle fade-in when sections scroll into view
+// Subtle fade-in on scroll
 const revealItems = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -45,5 +45,35 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => {
     item.classList.add("is-visible");
+  });
+}
+
+// Highlight the current section in the fixed menu
+const navLinks = document.querySelectorAll(".side-nav a[data-section]");
+const sections = document.querySelectorAll("main section[data-section]");
+
+if ("IntersectionObserver" in window && navLinks.length && sections.length) {
+  const setActiveLink = (sectionName) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.section === sectionName);
+    });
+  };
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.dataset.section);
+        }
+      });
+    },
+    {
+      threshold: 0.45,
+      rootMargin: "-10% 0px -45% 0px",
+    }
+  );
+
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
   });
 }

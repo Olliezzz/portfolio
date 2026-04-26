@@ -6,7 +6,7 @@
   <title>Olga Zakharchenko | Graphic Designer</title>
   <meta
     name="description"
-    content="Portfolio website for Olga Zakharchenko, a graphic designer creating visual systems, digital experiences, and storytelling work."
+    content="Olga Zakharchenko is a graphic designer creating visual systems, digital experiences, and storytelling work."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,25 +17,22 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-name" href="#top">Ollie Design</a>
+  <a class="site-name" href="#top">Ollie Design</a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      Menu
-    </button>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    Menu
+  </button>
 
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#archive">Archive</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="side-nav" id="site-nav" aria-label="Primary navigation">
+    <a href="#about" data-section="about">About</a>
+    <a href="#work" data-section="work">Work</a>
+    <a href="#contact" data-section="contact">Contact</a>
+    <a class="archive-link" href="#archive" data-section="archive">Archive ↘</a>
+  </nav>
 
   <main id="top">
-    <section class="hero section">
+    <section class="hero section" id="hero" data-section="hero">
       <div class="hero-main reveal">
-        <p class="eyebrow">Portfolio</p>
         <h1>Olga Zakharchenko</h1>
         <p class="hero-role">Graphic Designer</p>
         <p class="hero-intro">
@@ -43,52 +40,57 @@
           culture, ecology, and motion.
         </p>
       </div>
-
-      <div class="hero-side reveal">
-        <p class="hero-note">
-          Editorial, motion, web, and identity work with a strong interest in clarity,
-          atmosphere, and visual structure.
-        </p>
-      </div>
     </section>
 
-    <section class="services section" id="services">
+    <section class="about section" id="about" data-section="about">
       <div class="section-heading reveal">
-        <p class="eyebrow">What I do</p>
-        <h2>Design work that moves between identity, communication, and digital space.</h2>
+        <p class="eyebrow">Just About</p>
+        <h2>Art, identity, typography, motion, and interfaces shaped into clear visual experiences.</h2>
       </div>
 
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <h3>Visual Identity</h3>
-          <p>I build identities that feel distinct, structured, and adaptable across formats.</p>
-        </article>
+      <div class="about-layout">
+        <p class="about-text reveal">
+          I’m a graphic design student at OCAD University interested in how design can guide
+          people through culture, information, and emotion.
+        </p>
 
-        <article class="service-card reveal">
-          <h3>Editorial &amp; Typography</h3>
-          <p>I shape reading experiences through hierarchy, pacing, composition, and type.</p>
-        </article>
-
-        <article class="service-card reveal">
-          <h3>Web &amp; Interactive Design</h3>
-          <p>I design websites and interfaces that balance navigation, atmosphere, and usability.</p>
-        </article>
-
-        <article class="service-card reveal">
-          <h3>Motion &amp; Storytelling</h3>
-          <p>I use movement and sequence to give visual ideas rhythm, emotion, and direction.</p>
-        </article>
+        <div class="focus-grid">
+          <article class="focus-card reveal">
+            <h3>Art Direction</h3>
+            <p>Shaping visual tone, atmosphere, and structure across formats.</p>
+          </article>
+          <article class="focus-card reveal">
+            <h3>Visual Identity</h3>
+            <p>Building identity systems that feel distinct and adaptable.</p>
+          </article>
+          <article class="focus-card reveal">
+            <h3>Editorial &amp; Typography</h3>
+            <p>Using layout and type to guide attention and reading rhythm.</p>
+          </article>
+          <article class="focus-card reveal">
+            <h3>Web &amp; Interactive Design</h3>
+            <p>Designing digital spaces that balance clarity, flow, and feeling.</p>
+          </article>
+          <article class="focus-card reveal">
+            <h3>Motion &amp; Storytelling</h3>
+            <p>Using movement to give ideas pacing, emotion, and direction.</p>
+          </article>
+          <article class="focus-card reveal">
+            <h3>Environmental Communication</h3>
+            <p>Translating research and ecological ideas into visual form.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="work section" id="work">
+    <section class="work section" id="work" data-section="work">
       <div class="section-heading reveal">
         <p class="eyebrow">Selected Work</p>
-        <h2>A focused selection of projects across culture, motion, systems, and digital work.</h2>
+        <h2>A focused group of projects across culture, motion, systems, and digital design.</h2>
       </div>
 
       <div class="projects-list">
-        <!-- Edit project titles, categories, descriptions, and placeholder labels here -->
+        <!-- Edit titles, categories, descriptions, and placeholder labels here -->
         <article class="project-card reveal">
           <div class="project-meta">
             <p class="project-number">01</p>
@@ -98,8 +100,7 @@
             </div>
           </div>
           <p class="project-description">
-            A cultural guide platform designed to help people navigate Toronto’s art spaces
-            with curiosity and ease.
+            A cultural guide platform for discovering exhibitions, art spaces, and creative places in Toronto.
           </p>
           <div class="project-visual visual-blue">
             <div class="placeholder-label">Website Preview</div>
@@ -115,7 +116,7 @@
             </div>
           </div>
           <p class="project-description">
-            A motion study using poetic timing and typographic rhythm to shape emotional pacing.
+            A motion piece exploring pacing, silence, and rhythm through animated language.
           </p>
           <div class="project-visual visual-neutral">
             <div class="placeholder-label">Motion Still</div>
@@ -131,7 +132,7 @@
             </div>
           </div>
           <p class="project-description">
-            A system of diagrams and visual language for explaining ecological production and reuse.
+            A visual system for communicating ecological production, reuse, and circular futures.
           </p>
           <div class="project-visual visual-green">
             <div class="placeholder-label">Research Graphic</div>
@@ -147,7 +148,7 @@
             </div>
           </div>
           <p class="project-description">
-            A speculative concept exploring tactile immersion through haptics, narrative, and mixed reality.
+            A speculative concept for tactile mixed reality built around story, immersion, and haptics.
           </p>
           <div class="project-visual visual-dark">
             <div class="placeholder-label">Concept Frame</div>
@@ -163,7 +164,7 @@
             </div>
           </div>
           <p class="project-description">
-            A series of publication layouts testing contrast, sequencing, and image-text relationships.
+            A series of layout studies testing hierarchy, image relationships, and reading flow.
           </p>
           <div class="project-visual visual-pearl">
             <div class="placeholder-label">Editorial Spread</div>
@@ -179,81 +180,50 @@
             </div>
           </div>
           <p class="project-description">
-            An evolving collection of drafts, studies, and unfinished pieces that reveal process.
+            An evolving set of drafts, fragments, and studies that shows how ideas develop over time.
           </p>
           <div class="project-visual visual-line">
             <div class="placeholder-label">Process View</div>
           </div>
         </article>
-
-        <article class="project-card reveal">
-          <div class="project-meta">
-            <p class="project-number">07</p>
-            <div>
-              <h3>3D Works</h3>
-              <p class="project-category">Game Design / Cinematic Experience</p>
-            </div>
-          </div>
-          <p class="project-description">
-            Spatial and character-focused 3D explorations for game worlds, atmosphere, and cinematic scenes.
-          </p>
-          <div class="project-visual visual-blueprint">
-            <div class="placeholder-label">3D Render</div>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section class="archive section" id="archive">
+    <section class="archive section" id="archive" data-section="archive">
       <div class="section-heading reveal">
         <p class="eyebrow">Archive</p>
-        <h2>A lighter process space for fragments, tests, and working notes.</h2>
+        <h2>A lighter process space for fragments, tests, and visual notes.</h2>
       </div>
 
       <div class="archive-grid">
         <article class="archive-card reveal">
           <h3>Sketches</h3>
-          <p>Loose composition studies and early visual directions.</p>
+          <p>Loose studies and early composition directions.</p>
         </article>
         <article class="archive-card reveal">
           <h3>Type Tests</h3>
-          <p>Experiments with scale, weight, rhythm, and hierarchy.</p>
+          <p>Experiments with scale, weight, spacing, and rhythm.</p>
         </article>
         <article class="archive-card reveal">
           <h3>Motion Frames</h3>
-          <p>Single frames and transitions from motion-based explorations.</p>
+          <p>Single frames and transitions from animation work.</p>
         </article>
         <article class="archive-card reveal">
           <h3>Website Drafts</h3>
-          <p>Wireframes, interface directions, and early interaction ideas.</p>
+          <p>Wireframes, UI directions, and interaction thoughts.</p>
         </article>
         <article class="archive-card reveal">
           <h3>Research Notes</h3>
-          <p>Collected references, observations, and system thinking.</p>
+          <p>Collected references, system thinking, and observations.</p>
         </article>
         <article class="archive-card reveal">
           <h3>Visual Experiments</h3>
-          <p>Tests that sit between poster, interface, image, and motion.</p>
+          <p>Poster, interface, and image tests that stay open-ended.</p>
         </article>
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">About</p>
-        <h2>A practice shaped by curiosity, clarity, and atmosphere.</h2>
-      </div>
-
-      <div class="about-layout reveal">
-        <p class="about-text">
-          I’m a graphic design student at OCAD University interested in how design can guide
-          people through culture, information, and emotion. My work often connects art,
-          ecology, motion, and digital spaces.
-        </p>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" data-section="contact">
       <div class="section-heading reveal">
         <p class="eyebrow">Contact</p>
         <h2>Let’s create something thoughtful.</h2>
