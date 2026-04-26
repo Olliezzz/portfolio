@@ -3,92 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ollie Portfolio</title>
+  <title>Olga Zakharchenko | Graphic Designer</title>
+  <meta
+    name="description"
+    content="Portfolio website for Olga Zakharchenko, a graphic designer working across branding, editorial, motion, and interactive web experiences."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="header">
-    <a href="#" class="logo">Ollie designs</a>
-    <nav>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="site-name" href="#top">Olga Zakharchenko</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="#archive">Archive</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="small">Graphic Design / Web / Motion / Editorial</p>
-
-      <h1>
-        Visual<br>
-        stories<br>
-        for curious<br>
-        people.
-      </h1>
-
-      <div class="hero-info">
-        <p>Ollie Zakharchenko is a graphic designer exploring culture, sustainability, digital experiences, and emotional storytelling.</p>
-      </div>
-    </section>
-
-    <section class="split">
-      <div>
-        <p class="tiny">we are</p>
-        <h2>DESIGN<br>IN<br>MOTION</h2>
-      </div>
-      <div>
-        <p>
-         Build visual systems that connect research, feeling, and interaction —
-          from editorial layouts to websites, presentations, motion, and speculative design.
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Graphic Designer / Visual Systems / Motion / Web</p>
+        <h1>Designing visual stories for culture, ecology, and digital spaces.</h1>
+        <p class="hero-intro">
+          I’m Olga, a graphic designer creating work across branding, editorial design,
+          motion, and interactive web experiences.
         </p>
       </div>
+
+      <div class="hero-visual reveal" aria-label="Abstract visual placeholder">
+        <div class="shape shape-one"></div>
+        <div class="shape shape-two"></div>
+        <div class="shape shape-three"></div>
+        <div class="hero-note">
+          <span>Visual Atmosphere</span>
+          <p>Replace this block with artwork, motion stills, or project imagery.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="work" class="work">
-      <p class="small">Selected cases</p>
-
-      <article class="case">
-        <span>01</span>
-        <h3>Art Tourism Toronto</h3>
-        <p>Interactive website for discovering art spaces and exhibitions.</p>
-      </article>
-
-      <article class="case">
-        <span>02</span>
-        <h3>Touch Reality</h3>
-        <p>Speculative AR/VR concept exploring touch, haptics, and immersive futures.</p>
-      </article>
-
-      <article class="case">
-        <span>03</span>
-        <h3>Allbirds Audit</h3>
-        <p>Sustainability strategy, scoring systems, and design management.</p>
-      </article>
-
-      <article class="case">
-        <span>04</span>
-        <h3>Kinetic Type Haiku</h3>
-        <p>Motion typography project using rhythm, movement, and poetic timing.</p>
-      </article>
+    <section class="marquee" aria-label="Scrolling studio keywords">
+      <div class="marquee-track">
+        <span>Visual systems</span>
+        <span>Editorial thinking</span>
+        <span>Culture and ecology</span>
+        <span>Motion and interface</span>
+        <span>Environmental storytelling</span>
+        <span>Visual systems</span>
+        <span>Editorial thinking</span>
+        <span>Culture and ecology</span>
+        <span>Motion and interface</span>
+        <span>Environmental storytelling</span>
+      </div>
     </section>
 
-    <section id="about" class="about">
-      <p class="small">Just about</p>
-      <h2>Art direction · Branding · Web design · Motion · Typography · Research</h2>
+    <section class="about section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Just About</p>
+        <h2>Design that gives ideas a sense of place, movement, and feeling.</h2>
+      </div>
+
+      <div class="about-layout">
+        <p class="about-text reveal">
+          My work explores how design can guide people through cultural experiences,
+          environmental ideas, and digital spaces. I’m interested in visual systems,
+          storytelling, motion, and interfaces that feel thoughtful and alive.
+        </p>
+
+        <ul class="focus-list reveal">
+          <li>Art Direction</li>
+          <li>Branding</li>
+          <li>Editorial Design</li>
+          <li>Web Design</li>
+          <li>Motion Design</li>
+          <li>Environmental Communication</li>
+          <li>Typography</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-      <p class="small">Let’s</p>
-      <h2>create<br>together</h2>
-      <a href="mailto:ollie.zkr@gmail.com">ollie.zkr@gmail.com</a>
+    <section class="work section" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Numbered projects with room for story, process, and image.</h2>
+      </div>
+
+      <div class="projects-list">
+        <!-- Project cards: edit titles, text, and placeholder labels here -->
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">01</p>
+            <div>
+              <p class="project-category">Web / Cultural Resource</p>
+              <h3>Art Tourism Toronto</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            A resource website helping people discover art spaces, exhibitions, and cultural
+            experiences in Toronto.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Project Image / Website Screen</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">02</p>
+            <div>
+              <p class="project-category">Motion / Typography</p>
+              <h3>Kinetic Typography Haiku</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            An animated type project exploring rhythm, movement, and emotional pacing
+            through words.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Motion Frames / Type Still</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">03</p>
+            <div>
+              <p class="project-category">Sustainability / Visual Communication</p>
+              <h3>Circular Economy Design</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            A design research project using visual systems to explain ecological production
+            and circular futures.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Diagram / Research Poster</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">04</p>
+            <div>
+              <p class="project-category">Speculative Design / AR &amp; VR</p>
+              <h3>Touch Reality</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            A future-facing concept for tactile mixed reality experiences using storytelling,
+            haptics, and immersive design.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Concept Visual / Interface Scene</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">05</p>
+            <div>
+              <p class="project-category">Publication / Typography</p>
+              <h3>Editorial Experiments</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            Layout explorations combining hierarchy, image, and text as a designed reading
+            experience.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Spread Mockup / Editorial Cover</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">06</p>
+            <div>
+              <p class="project-category">Process / Experiments</p>
+              <h3>Visual Archive</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            Sketches, tests, posters, interface studies, and unfinished ideas that show my
+            design thinking.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">Sketch Wall / Process Frames</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta">
+            <p class="project-number">07</p>
+            <div>
+              <p class="project-category">3D / Spatial Exploration</p>
+              <h3>3D Models</h3>
+            </div>
+          </div>
+          <p class="project-description">
+            Exploration of 3D form for games, animation and photography, environmental spaces,
+            and human models.
+          </p>
+          <div class="project-visual">
+            <div class="placeholder-label">3D Render / Spatial Study</div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive section" id="archive">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Archive / Process</p>
+        <h2>A living collection of fragments, tests, and in-progress ideas.</h2>
+      </div>
+
+      <div class="archive-grid">
+        <article class="archive-card reveal"><span>01</span><h3>Sketches</h3></article>
+        <article class="archive-card reveal"><span>02</span><h3>Type Tests</h3></article>
+        <article class="archive-card reveal"><span>03</span><h3>Motion Frames</h3></article>
+        <article class="archive-card reveal"><span>04</span><h3>Website Drafts</h3></article>
+        <article class="archive-card reveal"><span>05</span><h3>Research Notes</h3></article>
+        <article class="archive-card reveal"><span>06</span><h3>Visual Experiments</h3></article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s create something thoughtful.</h2>
+      </div>
+
+      <div class="contact-layout reveal">
+        <a class="contact-email" href="mailto:ollie.zkr@gmail.com">ollie.zkr@gmail.com</a>
+
+        <div class="contact-links">
+          <a href="mailto:ollie.zkr@gmail.com">Email</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/" target="_blank" rel="noreferrer">Behance</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <div class="ticker">
-    <span>portfolio archive portfolio archive portfolio archive portfolio archive</span>
-  </div>
+  <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
 
   <script src="script.js"></script>
 </body>
