@@ -19,8 +19,8 @@
 <body>
   <a class="site-name" href="#top">Ollie Design</a>
 
-  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-    Menu
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+    +
   </button>
 
   <nav class="side-nav" id="site-nav" aria-label="Primary navigation">
@@ -33,8 +33,10 @@
   <main id="top">
     <section class="hero section" id="hero">
       <div class="hero-main reveal">
-        <h1>Graphic Design Studio</h1>
-        <p class="hero-role">Olga Zakharchenko</p>
+        <h1>Olga<br />Zakharchenko</h1>
+        <p class="hero-role">Graphic Designer</p>
+      </div>
+      <div class="hero-note reveal">
         <p class="hero-intro">
           I create visual systems, digital experiences, and storytelling projects across
           culture, ecology, and motion.
@@ -42,46 +44,39 @@
       </div>
     </section>
 
-
-
-    <section class="services section" id="services">
+    <section class="about section" id="about" data-section="about">
       <div class="section-heading reveal">
-        <p class="eyebrow">What I Do</p>
-        <h2>Visual systems and storytelling across identity, type, motion, and interaction.</h2>
+        <p class="eyebrow">Just About</p>
+        <h2>Art, culture, ecology, motion, and digital design brought together with clarity.</h2>
       </div>
 
-      <div class="services-list">
-        <article class="service-row reveal">
-          <h3>Visual Identity</h3>
-          <p>Identity systems built to feel distinct, clear, and flexible across formats.</p>
-        </article>
-        <article class="service-row reveal">
-          <h3>Editorial &amp; Typography</h3>
-          <p>Layouts and type choices that create rhythm, structure, and readability.</p>
-        </article>
-        <article class="service-row reveal">
-          <h3>Web &amp; Interactive Design</h3>
-          <p>Digital experiences that balance atmosphere, usability, and navigation.</p>
-        </article>
-        <article class="service-row reveal">
-          <h3>Motion &amp; Storytelling</h3>
-          <p>Movement and sequencing used to give visual ideas emotion and pace.</p>
-        </article>
-        <article class="service-row reveal">
-          <h3>Environmental Communication</h3>
-          <p>Design frameworks for translating cultural and ecological ideas into form.</p>
-        </article>
+      <div class="about-layout reveal">
+        <p class="about-text">
+          I’m a graphic design student at OCAD University interested in how design can guide
+          people through culture, information, and emotion. My work often connects art,
+          ecology, motion, and digital spaces.
+        </p>
+      </div>
+
+      <div class="services-editorial reveal">
+        <p class="eyebrow">What I Do</p>
+        <div class="services-stack">
+          <p>Visual Identity</p>
+          <p>Editorial &amp; Typography</p>
+          <p>Web &amp; Interactive Design</p>
+          <p>Motion &amp; Storytelling</p>
+          <p>Environmental Communication</p>
+        </div>
       </div>
     </section>
 
     <section class="work section" id="work" data-section="work">
       <div class="section-heading reveal">
         <p class="eyebrow">Selected Cases</p>
-        <h2>Large-scale studio projects presented as clear, stacked visual narratives.</h2>
+        <h2>Large-format case studies built with the pace and hierarchy of an editorial studio site.</h2>
       </div>
 
       <div class="cases-list">
-        <!-- Edit case titles, categories, descriptions, and placeholder labels here -->
         <article class="case-block reveal">
           <div class="case-header">
             <p class="case-number">01</p>
@@ -95,7 +90,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-blue">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Web Interface / Cultural Map</div>
           </div>
         </article>
 
@@ -112,7 +107,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-neutral">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Type Motion / Frame Sequence</div>
           </div>
         </article>
 
@@ -129,7 +124,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-green">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Systems Graphic / Research Panel</div>
           </div>
         </article>
 
@@ -146,7 +141,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-dark">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Immersive Concept / Tactile Scene</div>
           </div>
         </article>
 
@@ -163,7 +158,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-pearl">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Spread Composition / Type Study</div>
           </div>
         </article>
 
@@ -180,7 +175,7 @@
             <span class="case-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="case-visual visual-line">
-            <div class="placeholder-label">Landscape Placeholder</div>
+            <div class="case-panel-label">Fragments / Draft System</div>
           </div>
         </article>
       </div>
@@ -189,34 +184,16 @@
     <section class="archive section" id="archive" data-section="archive">
       <div class="section-heading reveal">
         <p class="eyebrow">Archive</p>
-        <h2>A lighter process space for fragments, tests, and visual notes.</h2>
+        <h2>A running index of sketches, tests, and process materials.</h2>
       </div>
 
-      <div class="archive-grid">
-        <article class="archive-card reveal">
-          <h3>Sketches</h3>
-          <p>Loose studies and early composition directions.</p>
-        </article>
-        <article class="archive-card reveal">
-          <h3>Type Tests</h3>
-          <p>Experiments with scale, weight, spacing, and rhythm.</p>
-        </article>
-        <article class="archive-card reveal">
-          <h3>Motion Frames</h3>
-          <p>Single frames and transitions from animation work.</p>
-        </article>
-        <article class="archive-card reveal">
-          <h3>Website Drafts</h3>
-          <p>Wireframes, UI directions, and interaction thoughts.</p>
-        </article>
-        <article class="archive-card reveal">
-          <h3>Research Notes</h3>
-          <p>Collected references, system thinking, and observations.</p>
-        </article>
-        <article class="archive-card reveal">
-          <h3>Visual Experiments</h3>
-          <p>Poster, interface, and image tests that stay open-ended.</p>
-        </article>
+      <div class="archive-index reveal">
+        <div class="archive-row"><span>01</span><p>Sketches</p></div>
+        <div class="archive-row"><span>02</span><p>Type Tests</p></div>
+        <div class="archive-row"><span>03</span><p>Motion Frames</p></div>
+        <div class="archive-row"><span>04</span><p>Website Drafts</p></div>
+        <div class="archive-row"><span>05</span><p>Research Notes</p></div>
+        <div class="archive-row"><span>06</span><p>Visual Experiments</p></div>
       </div>
     </section>
 

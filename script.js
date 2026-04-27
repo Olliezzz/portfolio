@@ -6,7 +6,7 @@ if (navToggle && sideNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = sideNav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.textContent = isOpen ? "Close" : "Menu";
+    navToggle.textContent = isOpen ? "×" : "+";
     document.body.classList.toggle("menu-open", isOpen);
   });
 
@@ -14,7 +14,7 @@ if (navToggle && sideNav) {
     link.addEventListener("click", () => {
       sideNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
-      navToggle.textContent = "Menu";
+      navToggle.textContent = "+";
       document.body.classList.remove("menu-open");
     });
   });
@@ -92,8 +92,8 @@ if ("IntersectionObserver" in window && navLinks.length && sections.length) {
       updateActiveSection();
     },
     {
-      threshold: [0.2, 0.35, 0.5, 0.7],
-      rootMargin: "-12% 0px -35% 0px",
+      threshold: [0.15, 0.3, 0.5, 0.7],
+      rootMargin: "-35% 0px -35% 0px",
     }
   );
 
