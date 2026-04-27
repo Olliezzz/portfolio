@@ -53,27 +53,74 @@ const navLinks = document.querySelectorAll(".side-nav a[data-section]");
 const sections = document.querySelectorAll("main section[data-section]");
 
 if ("IntersectionObserver" in window && navLinks.length && sections.length) {
+  const visibleSections = new Map();
+
   const setActiveLink = (sectionName) => {
     navLinks.forEach((link) => {
       link.classList.toggle("is-active", link.dataset.section === sectionName);
     });
   };
 
+  const updateActiveSection = () => {
+    let activeSection = "";
+    let highestRatio = 0;
+
+    visibleSections.forEach((ratio, sectionName) => {
+      if (ratio > highestRatio) {
+        highestRatio = ratio;
+        activeSection = sectionName;
+      }
+    });
+
+    if (activeSection) {
+      setActiveLink(activeSection);
+    }
+  };
+
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const sectionName = entry.target.dataset.section;
+
         if (entry.isIntersecting) {
-          setActiveLink(entry.target.dataset.section);
+          visibleSections.set(sectionName, entry.intersectionRatio);
+        } else {
+          visibleSections.delete(sectionName);
         }
       });
+
+      updateActiveSection();
     },
     {
-      threshold: 0.45,
-      rootMargin: "-10% 0px -45% 0px",
+      threshold: [0.2, 0.35, 0.5, 0.7],
+      rootMargin: "-12% 0px -35% 0px",
     }
   );
 
   sections.forEach((section) => {
     sectionObserver.observe(section);
   });
+
+  setActiveLink("about");
 }
+
+// Small tap-state helper so case hover styling can also appear on touch devices
+const caseBlocks = document.querySelectorAll(".case-block");
+
+caseBlocks.forEach((block) => {
+  block.addEventListener("touchstart", () => {
+    caseBlocks.forEach((item) => {
+      if (item !== block) {
+        item.classList.remove("is-tapped");
+      }
+    });
+
+    block.classList.add("is-tapped");
+  }, { passive: true });
+
+  block.addEventListener("touchend", () => {
+    window.setTimeout(() => {
+      block.classList.remove("is-tapped");
+    }, 220);
+  }, { passive: true });
+});
