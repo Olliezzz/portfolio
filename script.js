@@ -52,9 +52,7 @@ if ("IntersectionObserver" in window) {
 const navLinks = document.querySelectorAll(".side-nav a[data-section]");
 const sections = document.querySelectorAll("main section[data-section]");
 
-if ("IntersectionObserver" in window && navLinks.length && sections.length) {
-  const visibleSections = new Map();
-
+if (navLinks.length && sections.length) {
   const setActiveLink = (sectionName) => {
     navLinks.forEach((link) => {
       link.classList.toggle("is-active", link.dataset.section === sectionName);
@@ -62,46 +60,30 @@ if ("IntersectionObserver" in window && navLinks.length && sections.length) {
   };
 
   const updateActiveSection = () => {
-    let activeSection = "";
-    let highestRatio = 0;
+    let activeSection = sections[0].dataset.section;
+    const triggerPoint = window.innerHeight * 0.4;
 
-    visibleSections.forEach((ratio, sectionName) => {
-      if (ratio > highestRatio) {
-        highestRatio = ratio;
-        activeSection = sectionName;
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
+        activeSection = section.dataset.section;
       }
     });
 
-    if (activeSection) {
-      setActiveLink(activeSection);
-    }
+    setActiveLink(activeSection);
   };
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const sectionName = entry.target.dataset.section;
-
-        if (entry.isIntersecting) {
-          visibleSections.set(sectionName, entry.intersectionRatio);
-        } else {
-          visibleSections.delete(sectionName);
-        }
-      });
-
-      updateActiveSection();
-    },
-    {
-      threshold: [0.15, 0.3, 0.5, 0.7],
-      rootMargin: "-35% 0px -35% 0px",
-    }
-  );
-
-  sections.forEach((section) => {
-    sectionObserver.observe(section);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setActiveLink(link.dataset.section);
+    });
   });
 
-  setActiveLink("about");
+  window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("resize", updateActiveSection);
+
+  updateActiveSection();
 }
 
 // Small tap-state helper so case hover styling can also appear on touch devices
