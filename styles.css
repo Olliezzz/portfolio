@@ -81,9 +81,9 @@ button {
   top: 1.5rem;
   right: 1.5rem;
   display: grid;
-  justify-items: end;
+  justify-items: start;
   gap: 0.35rem;
-  text-align: right;
+
 }
 
 .side-nav a {
@@ -251,6 +251,7 @@ main {
 .cases-list {
   display: grid;
   gap: 2rem;
+  width: 70%;
 }
 
 .case-block {
