@@ -64,11 +64,13 @@ button {
 
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   top: 1.2rem;
   right: 1rem;
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 999px;
-  background: rgba(251, 250, 246, 0.96);
+  background: none;
   width: 2.8rem;
   height: 2.8rem;
   padding: 0;
